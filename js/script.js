@@ -59,10 +59,6 @@ function newGame() {
 
 }
 
-function playerPick(playerPick) {
-    console.log(playerPick);
-}
-
 function getComputerPick() {
     var possiblePicks = ['rock', 'paper', 'scissors'];
     return possiblePicks[Math.floor(Math.random()*3)];
@@ -88,7 +84,7 @@ function checkRoundWinner(playerPick, computerPick) {
 	var winnerIs = 'player';
 
 		if (playerPick === computerPick) {
-        winnerIs = 'none'; // remis
+        winnerIs = 'none'; // draw
 		}	else if (
 			(computerPick === 'rock' &&  playerPick === 'scissors') ||
 			(computerPick === 'scissors' &&  playerPick === 'paper') ||
